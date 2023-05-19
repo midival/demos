@@ -2,8 +2,6 @@ import { IMIDIInput, IMIDIOutput, MIDIValInput, MIDIValOutput, NoteMessage } fro
 import { For, createSignal } from "solid-js"
 import { ActiveNote, MPEMidivalOutput } from "@midival/core/dist/mpe"
 
-import * as classes from "./styles.module.css"
-
 interface Props {
     output: IMIDIOutput
 }
@@ -122,7 +120,7 @@ export const OutputDashboard = ({ output }: Props) => {
     const notes = [64, 68, 70]
 
     return <>
-        <div class={classes.notesControllersWrapper}>
+        <div>
             <For each={notes}>{(v) => 
                 <Note value={v} mpe={mpeOutput} />
             }</For>
