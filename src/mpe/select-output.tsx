@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from "react"
-import { IMIDIOutput, MIDIVal } from "@midival/core";
-import { IMIDIAccess } from "../../../core/src";
+import { IMIDIOutput, MIDIVal, IMIDIAccess } from "@midival/core";
 
 interface Props {
     onSelect: (output: IMIDIOutput) => void,

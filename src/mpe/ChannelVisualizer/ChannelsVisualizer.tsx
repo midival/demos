@@ -1,5 +1,5 @@
 import React from "react"
-import { MPEInputZone } from "../../../../core/src/mpe/input/MPEInputZone"
+import { MPEInputZone } from "@midival/core/dist/mpe"
 import "./styles.css"
 
 interface Props {
@@ -18,7 +18,7 @@ const ZoneDisplay = ({ zone, isUpper }: ZoneDisplayProps) => {
         <div className="child-zones" style={{
             "--count": zone.memberChannelRange[1] - zone.memberChannelRange[0] + 1,
             "--offset": isUpper ? 16 - 2 - (zone.memberChannelRange[1] - zone.memberChannelRange[0]) : 0
-        }}></div>
+        } as any}></div>
         {isUpper && <div className="master-channel"></div>}
     </div>
 }

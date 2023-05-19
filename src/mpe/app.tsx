@@ -3,7 +3,7 @@ import { SelectOutput } from "./select-output";
 import { IMIDIAccess, IMIDIOutput, MIDIVal } from "@midival/core";
 import { Experience } from "./Experience";
 import { SelectInput } from "./select-input";
-import { IMIDIInput } from "../../../core/src";
+import { IMIDIInput } from "@midival/core";
 import { InputExperience } from "./InputExperience";
 
 export function App() {

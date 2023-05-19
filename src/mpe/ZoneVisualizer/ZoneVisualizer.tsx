@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { MPEInputZone } from "../../../../core/src/mpe/input/MPEInputZone"
-import { ActiveNote } from "../../../../core/src/mpe/output/ActiveNote";
+import { ActiveNote, MPEInputZone } from "@midival/core/dist/mpe";
 import { NoteMessage } from "@midival/core";
 
 import "./style.css"

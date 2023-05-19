@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
-import { MPEMidivalOutput } from "../../../core/src/mpe/output/MPEMidivalOutput"
+import { MPEMidivalOutput } from "@midival/core/dist/mpe"
 import { IMIDIOutput } from "@midival/core"
-import { ActiveNote } from "../../../core/src/mpe/output/ActiveNote"
+import { ActiveNote } from "@midival/core/dist/mpe"
 
 interface Props {
     output: IMIDIOutput
@@ -14,7 +14,7 @@ const modifyNote = (note: ActiveNote, slowDown: number = 5) => {
 
         note.changeTimbre(t(0) * 30 + 60)
         note.changeBend(t(50) * 0.5)
-        note.changeVelocity(t(23) * 50 + 50)
+        note.changePressure(t(23) * 50 + 50)
     }
 }
 

@@ -1,9 +1,9 @@
 import { IMIDIInput } from "@midival/core";
-import React, { createRef, useEffect, useState } from "react";
-import { MPEMidivalInput } from "../../../core/src/mpe/input/MPEMidivalInput"
-import { MIDIValInput } from "../../../core/src/MIDIValInput"
+import React, { useEffect, useState } from "react";
+import { MPEMidivalInput } from "@midival/core/dist/mpe"
+import { MIDIValInput } from "@midival/core"
 import { ChannelVisualizer } from "./ChannelVisualizer/ChannelsVisualizer";
-import { MPEInputZone } from "../../../core/src/mpe/input/MPEInputZone";
+import { MPEInputZone } from "@midival/core/dist/mpe";
 import { ZoneVisualizer } from "./ZoneVisualizer/ZoneVisualizer";
 
 interface Props {
@@ -17,7 +17,7 @@ export const InputExperience = ({ input }: Props) => {
 
     useEffect(() => {
         const inp = new MIDIValInput(input)
-        const mpe = new MPEMidivalInput(inp, {})
+        const mpe = new MPEMidivalInput(inp)
         mpe.onLowerZoneUpdate(lowerZone => {
             console.log("LOWER ZONE", lowerZone)
             setLowerZone(lowerZone)
