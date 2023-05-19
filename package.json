@@ -35,7 +35,7 @@
     }
   },
   "scripts": {
-    "build": "yarn parcel build",
+    "build": "yarn parcel build --publicUrl https://midival.github.io/demos/",
     "start": "yarn parcel src/mpe-solid/index.html"
   }
 }
