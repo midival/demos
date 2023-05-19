@@ -1,0 +1,23 @@
+body {
+    background: #4e0e97;
+    color: #EEE;
+    font-family: sans-serif;
+}
+
+select {
+    background: transparent;
+    padding: 5px;
+    color: #EEE;
+    margin: 0 10px;
+}
+
+button {
+    background: #2f075f;
+    padding: 10px;
+    color: #EEE;
+    border: 1px solid #EEE;
+}
+
+.select-description {
+    padding: 20px;
+}

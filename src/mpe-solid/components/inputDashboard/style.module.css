@@ -1,0 +1,12 @@
+.note {
+    background: red;
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.notesContainer {
+    background: #EEE;
+    min-height: 300px;
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@midival/demos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.12.0",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "babel-preset-solid": "^1.7.4",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@midival/core": "^0.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "solid-js": "^1.7.5"
+  },
+  "targets": {
+    "home": {
+      "source": "src/index.html",
+      "distDir": "dist"
+    },
+    "mpe": {
+      "source": "src/mpe/index.html",
+      "distDir": "dist/mpe"
+    },
+    "mpe-solid": {
+      "source": "src/mpe-solid/index.html",
+      "distDir": "dist/mpe-solid"
+    }
+  },
+  "scripts": {
+    "build": "yarn parcel build",
+    "start": "yarn parcel src/mpe-solid/index.html"
+  }
+}

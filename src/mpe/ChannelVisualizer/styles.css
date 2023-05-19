@@ -1,0 +1,32 @@
+.channel-visualizer .header span {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    background: #EEE;
+    color: #000;
+}
+
+.channel-visualizer {
+    width: calc(16 * 30px);
+}
+
+.zone-display {
+    height: 20px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+.master-channel {
+    width: 30px;
+    height: 20px;
+    background: black;
+    display: inline-block;
+}
+
+.child-zones {
+    width: calc(var(--count) * 30px);
+    margin-left: calc(var(--offset) * 30px);
+    height: 20px;
+    background: #BBB;
+    display: inline-block;
+}
