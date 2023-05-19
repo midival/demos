@@ -20,15 +20,18 @@
   "targets": {
     "home": {
       "source": "src/index.html",
-      "distDir": "dist"
+      "distDir": "dist",
+      "publicUrl": "https://midival.github.io/demos/"
     },
     "mpe": {
       "source": "src/mpe/index.html",
-      "distDir": "dist/mpe"
+      "distDir": "dist/mpe",
+      "publicUrl": "https://midival.github.io/demos/mpe/"
     },
     "mpe-solid": {
       "source": "src/mpe-solid/index.html",
-      "distDir": "dist/mpe-solid"
+      "distDir": "dist/mpe-solid",
+      "publicUrl": "https://midival.github.io/demos/mpe-solid/"
     }
   },
   "scripts": {
