@@ -25,14 +25,10 @@
     "mpe": {
       "source": "src/mpe/index.html",
       "distDir": "dist/mpe"
-    },
-    "mpe-solid": {
-      "source": "src/mpe-solid/index.html",
-      "distDir": "dist/mpe-solid"
     }
   },
   "scripts": {
     "build": "yarn parcel build --public-url ./",
-    "start": "yarn parcel src/mpe-solid/index.html"
+    "start": "yarn parcel src/mpe/index.html"
   }
 }
