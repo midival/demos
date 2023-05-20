@@ -2,6 +2,8 @@ import { IMIDIInput, IMIDIOutput, MIDIValInput, MIDIValOutput, NoteMessage } fro
 import { For, createSignal } from "solid-js"
 import { ActiveNote, MPEMidivalOutput } from "@midival/core/dist/mpe"
 
+import * as classes from "./style.module.css"
+
 interface Props {
     output: IMIDIOutput
 }
@@ -14,7 +16,11 @@ interface NoteProps {
 const identity = (x) => x
 
 const Note = ({ value, mpe }: NoteProps) => {
-    const [note, setNote] = createSignal<ActiveNote>(null, { equals: false })
+    const [note, setNote] = createSignal<ActiveNote>({
+        x: 0,
+        y: 0,
+        z: 0,
+    } as any, { equals: false })
     const [isXLfo, setIsXLfo] = createSignal<number>(0)
     const [isYLfo, setIsYLfo] = createSignal<number>(0)
     const [isZLfo, setIsZLfo] = createSignal<number>(0)
@@ -99,18 +105,16 @@ const Note = ({ value, mpe }: NoteProps) => {
         }
     }
 
-    startNote()
-
-    return <div>
+    return <div class={classes.noteConfig}>
         Note: {note().note}<br/>
         Channel: {note().channel}<br/>
         X: {note().x.toFixed(2)}<br/>
         Y: {note().y}<br/>
         Z: {note().z}<br/>
-        <button onClick={toggleNote}>{note().isActive ? 'Stop Note' : 'Play Note'}</button><br/>
-        <button onClick={toggleLfoX}>{isXLfo() ? 'Stop LFO X' : 'Start LFO X'}</button>
-        <button onClick={toggleLfoY}>{isYLfo() ? 'Stop LFO Y' : 'Start LFO Y'}</button>
-        <button onClick={toggleLfoZ}>{isZLfo() ? 'Stop LFO Z' : 'Start LFO Z'}</button>
+        <button onClick={toggleNote}>{note().isActive ? '🟢 Stop Note' : '⚪️ Play Note'}</button><br/>
+        <button onClick={toggleLfoX}>{isXLfo() ? '🟢 Stop LFO X' : '⚪️ Start LFO X'}</button>
+        <button onClick={toggleLfoY}>{isYLfo() ? '🟢 Stop LFO Y' : '⚪️ Start LFO Y'}</button>
+        <button onClick={toggleLfoZ}>{isZLfo() ? '🟢 Stop LFO Z' : '⚪️ Start LFO Z'}</button>
         </div>
 }
 
@@ -120,7 +124,7 @@ export const OutputDashboard = ({ output }: Props) => {
     const notes = [64, 68, 70]
 
     return <>
-        <div>
+        <div class={classes.notesContainer}>
             <For each={notes}>{(v) => 
                 <Note value={v} mpe={mpeOutput} />
             }</For>

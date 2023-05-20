@@ -1,12 +1,12 @@
 .note {
-    background: red;
     width: 200px;
     padding: 20px;
-    margin: 10px;
     display: inline-block;
+    border: 3px solid #FFF;
 }
 
 .notesContainer {
-    background: #EEE;
     min-height: 300px;
+    display: flex;
+    column-gap: 20px;
 }

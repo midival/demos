@@ -5,6 +5,7 @@ import { IMIDIAccess, IMIDIInput, IMIDIOutput, MIDIVal, MIDIValOutput } from '@m
 import { InputDashboard } from './components/inputDashboard/input-dashboard';
 import { MidivalOutputs } from './components/midival-outputs/midival-outputs';
 import { OutputDashboard } from './components/outputDashboard/outputDashboard';
+import "./style.module.css"
 
 function HelloWorld() {
     const [access, setAccess] = createSignal<IMIDIAccess>()
